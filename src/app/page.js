@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 
 function FunnelContent() {
   const searchParams = useSearchParams();
+  // Safely grab the 'name' parameter from the URL, defaulting to 'Trader' if not provided
   const leadName = searchParams.get('name') || 'Trader';
 
   return (
@@ -61,7 +62,6 @@ function FunnelContent() {
         {/* Video / Creator Frame Showcase */}
         <div className="w-full max-w-4xl bg-[#1c1917] rounded-2xl p-3 shadow-2xl mb-20 border border-stone-800">
           <div className="aspect-[16/9] bg-stone-900 rounded-xl flex items-center justify-center relative overflow-hidden border border-stone-800/80">
-            {/* Simulated background wall of trading streams */}
             <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#444_1px,transparent_1px)] [background-size:16px_16px]"></div>
             <div className="relative z-10 text-center">
               <div className="w-16 h-16 rounded-full bg-amber-400 text-stone-950 flex items-center justify-center font-bold text-xl mx-auto shadow-lg shadow-amber-400/30 cursor-pointer hover:scale-105 transition-transform">
